@@ -55,7 +55,7 @@ $(document).ajaxStop(function(){
         $("#current-cloud-cover").text(Number(weatherObj.currently.cloudCover)*100 + " %");
         $("#current-wind-speed").text(weatherObj.currently.windSpeed +" m/s");
         $("#current-precip-prob").text(weatherObj.currently.precipProbability);
-        //skycons.add("icon1", Skycons[(weatherObj.currently.icon).toUpperCase().replace(/-/g, "_")]);
+        skycons.add("icon1", Skycons[(weatherObj.currently.icon).toUpperCase().replace(/-/g, "_")]);
         //forecast
         var date1 = new Date(weatherObj.daily.data[1].time*1000);
         $(".first-container .day").text(weekday[date1.getDay()]);
@@ -88,8 +88,7 @@ $(document).ajaxStop(function(){
         $(".fifth-container .temp-low").html(Math.round(weatherObj.daily.data[6].temperatureLow)+ "&deg;C");
 
 
-        
-        skycons.add("icon1", Skycons["CLEAR_DAY"]);
+ 
         skycons.play();
         //
     }
