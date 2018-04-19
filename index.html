@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather app</title>
+</head>
+<body>
+    <main>
+            <div class="bg-video">
+                <div class="filter"></div>
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/Up.mp4" type="video/mp4">
+                        <source src="img/Up.webm" type="video/webm">
+                        Your browser is not supported!
+                    </video>
+            </div>
+        <div class="main-container">
+            <div class="city"></div>
+            <div class="current-weather">
+                <div class="icon-container">
+                        <canvas class="canvas" id="icon1" width="130" height="130"></canvas>
+                </div>
+                <div class="info-container">
+                    <div class="current-container-temp">
+                            <span id="current-temp"></span>
+                    </div>
+                    <div class="current-container-info">
+                            <span class="current-span"><i class="wi wi-cloud"></i><span id="current-cloud-cover"></span></span>
+                            <span class="current-span"><i class="wi wi-strong-wind"></i><span id="current-wind-speed"></span></span>
+                            <span class="current-span"><i class="wi wi-umbrella"></i><span id="current-precip-prob"></span></span>
+                    </div>   
+                </div>   
+            </div>  
+            <div class="forecast-container">
+                <div class="forecast first-container">
+                    <div class="day"></div>
+                    <div class="icon">
+                            <canvas class="canvas" id="icon2" width="80" height="80"></canvas>
+                    </div>
+                    <div class="temp">
+                            <div class="temp-high"></div>
+                            <div class="temp-low"></div>
+                    </div>
+                </div>
+                <div class="forecast second-container">
+                        <div class="day"></div>
+                        <div class="icon">
+                                <canvas class="canvas" id="icon3" width="80" height="80"></canvas>
+                        </div>
+                        <div class="temp">
+                                <div class="temp-high"></div>
+                                <div class="temp-low"></div>
+                        </div>
+                </div>
+                <div class="forecast third-container">
+                        <div class="day"></div>
+                        <div class="icon">
+                                <canvas class="canvas" id="icon4" width="80" height="80"></canvas>
+                        </div>
+                        <div class="temp">
+                                <div class="temp-high"></div>
+                                <div class="temp-low"></div>
+                        </div>
+                </div>
+                <div class="forecast fourth-container">
+                        <div class="day"></div>
+                        <div class="icon">
+                                <canvas class="canvas" id="icon5" width="80" height="80"></canvas>
+                        </div>
+                        <div class="temp">
+                                <div class="temp-high"></div>
+                                <div class="temp-low"></div>
+                        </div>
+                </div>
+                <div class="forecast fifth-container">
+                        <div class="day"></div>
+                        <div class="icon">
+                                <canvas class="canvas" id="icon6" width="80" height="80"></canvas>
+                        </div>
+                        <div class="temp">
+                            <div class="temp-high"></div>
+                            <div class="temp-low"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="loading-container">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="scripts/skycons.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
