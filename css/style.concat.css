@@ -45,7 +45,7 @@ body {
   box-sizing: border-box;
   border-collapse: collapse;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100; }
 
 a:link,
@@ -176,7 +176,7 @@ a:active {
 .loader:after {
   position: absolute;
   top: 0;
-  content: ''; }
+  content: ""; }
 
 .loader:before {
   left: -1.5em;
@@ -205,3 +205,81 @@ a:active {
   40% {
     box-shadow: 0 -2em;
     height: 5em; } }
+
+@media (max-width: 700px) {
+  .current-weather .icon-container .canvas {
+    height: 110px;
+    width: 110px; }
+  .forecast-container {
+    width: 100%;
+    grid-template-columns: 70%;
+    justify-content: center;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 100px;
+    margin-bottom: 20px; }
+    .forecast-container .forecast {
+      height: auto;
+      display: grid;
+      justify-content: space-between;
+      text-align: center;
+      grid-template-columns: repeat(3, auto);
+      padding-top: 2px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-right: none !important; }
+      .forecast-container .forecast:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+      .forecast-container .forecast .day,
+      .forecast-container .forecast .icon {
+        align-self: center; }
+      .forecast-container .forecast .temp {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        align-content: space-around; }
+        .forecast-container .forecast .temp .temp-low {
+          opacity: 0.6; }
+      .forecast-container .forecast .canvas {
+        width: 50px;
+        height: 50px; } }
+
+@media (max-width: 700px) {
+  .current-weather {
+    width: 260px; } }
+
+@media (min-height: 900px) {
+  .main-container {
+    justify-content: center; }
+  .city {
+    margin-top: auto;
+    font-size: 30px; }
+  .current-weather {
+    width: 400px; }
+    .current-weather .icon-container .canvas {
+      height: 150px;
+      width: 150px; }
+    .current-weather .info-container .current-container-info .current-span {
+      font-size: 16px;
+      margin-bottom: 5px; }
+      .current-weather .info-container .current-container-info .current-span .wi {
+        font-size: 20px; }
+    .current-weather .info-container .current-container-temp {
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      .current-weather .info-container .current-container-temp #current-temp {
+        font-size: 60px;
+        line-height: 0.8; }
+  .forecast-container .forecast {
+    height: 170px;
+    grid-template-rows: repeat(3, auto); }
+    .forecast-container .forecast .canvas {
+      width: 100px;
+      height: 100px; }
+    .forecast-container .forecast .day {
+      font-size: 18px; }
+    .forecast-container .forecast .temp {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 18px; }
+      .forecast-container .forecast .temp .temp-low {
+        opacity: 0.6; } }
