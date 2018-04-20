@@ -217,4 +217,61 @@ a:active {
   }
 }
 
+@media(max-width: 700px){
+
+  .current-weather{
+    .icon-container{
+      .canvas{
+        height:110px;
+        width: 110px;
+      }
+    }
+
+  }
+  .forecast-container{
+    width: 100%;
+    grid-template-columns: 70%;
+    justify-content: center;
+    grid-template-rows: repeat(5,auto);
+    margin-top: 100px;
+    margin-bottom: 20px;
   
+    .forecast{
+      height: auto;
+      display: grid;
+      justify-content: space-between;
+      text-align: center;
+      grid-template-columns: repeat(3,auto);
+      padding-top: 2px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-right: none !important;
+      &:last-child{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+  
+      .day,
+      .icon{
+        align-self: center;
+      }
+      .temp{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        align-content:space-around;
+        .temp-low{
+          opacity: 0.6;
+        }
+      }
+      .canvas{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .current-weather{
+    width: 260px;
+  }
+}

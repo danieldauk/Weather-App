@@ -56,6 +56,7 @@ $(document).ajaxStop(function(){
         $("#current-wind-speed").text(weatherObj.currently.windSpeed +" m/s");
         $("#current-precip-prob").text(weatherObj.currently.precipProbability);
         skycons.add("icon1", Skycons[(weatherObj.currently.icon).toUpperCase().replace(/-/g, "_")]);
+        
         //forecast
         var date1 = new Date(weatherObj.daily.data[1].time*1000);
         $(".first-container .day").text(weekday[date1.getDay()]);

@@ -121,7 +121,8 @@
   /* FIXME: I'm *really really* sorry that this code is so gross. Really, I am.
    * I'll try to clean it up eventually! Promise! */
   var KEYFRAME = 500,
-      STROKE = 0.04,
+      STROKE = 0.02,
+      STROKERAIN = 0.05,
       TAU = 2.0 * Math.PI,
       TWO_OVER_SQRT_2 = 2.0 / Math.sqrt(2);
 
@@ -576,7 +577,7 @@
         h = ctx.canvas.height,
         s = Math.min(w, h);
 
-    rain(ctx, t, w * 0.5, h * 0.37, s * 0.9, s * STROKE, color);
+    rain(ctx, t, w * 0.5, h * 0.37, s * 0.9, s * STROKERAIN, color);
     cloud(ctx, t, w * 0.5, h * 0.37, s * 0.9, s * STROKE, color);
   };
 
