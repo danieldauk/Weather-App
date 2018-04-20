@@ -52,7 +52,7 @@ $(document).ajaxStop(function(){
 
         //current weather
         $("#current-temp").html(Math.round(weatherObj.currently.temperature) + "&deg;C");
-        $("#current-cloud-cover").text(Number(weatherObj.currently.cloudCover)*100 + " %");
+        $("#current-cloud-cover").text(Math.round(Number(weatherObj.currently.cloudCover)*100) + " %");
         $("#current-wind-speed").text(weatherObj.currently.windSpeed +" m/s");
         $("#current-precip-prob").text(weatherObj.currently.precipProbability);
         skycons.add("icon1", Skycons[(weatherObj.currently.icon).toUpperCase().replace(/-/g, "_")]);
